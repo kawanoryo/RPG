@@ -30,8 +30,8 @@ public abstract class Human extends Living {
 		super.setOffensive(aofe);
 
 		// コンソールにステータスを表示
-		System.out.println(super.getName() + "が" + super.getWeapon() + "で攻撃！" + target.getName() + "に" + dam + "のダメージを与えた。"
-				+"しかし自身の攻撃力も1減少した");
+		System.out.println("「" + super.getName() + "」が「" + super.getWeapon() + "」で攻撃！「" + target.getName() + "」に" + dam + "のダメージを与えた。"
+				+"\r\nしかし自身の攻撃力も1減少した");
 		
 
 	}

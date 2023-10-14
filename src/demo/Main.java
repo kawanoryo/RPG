@@ -87,16 +87,17 @@ public class Main {
 			System.out.println("\n[モンスターのターン！]\n");
 
 			// 人間グループから1人選択
-			Human select_human2 = humans.get(Dice.get(0, humans.size() - 1));
+			select_human = humans.get(Dice.get(0, humans.size() - 1));
 
 			// モンスターグループから1人選択
-			Monster select_monster2 = monsters.get(Dice.get(0, monsters.size() - 1));
+			select_monster = monsters.get(Dice.get(0, monsters.size() - 1));
+			
 			// 選ばれたモンスターが、選ばれた人間を攻撃
-			select_monster2.attack(select_human2);
+			select_monster.attack(select_human);
 
 			// 人間のHPが0以下になれば、人間は倒れ、その人間をモンスターグループから削除
-			if (select_human2.getHp() <= 0) {
-				humans.remove(select_human2);
+			if (select_human.getHp() <= 0) {
+				humans.remove(select_human);
 				
 			}
 
